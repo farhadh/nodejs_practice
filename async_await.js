@@ -27,10 +27,18 @@ async function main() {
   await doSomeAsyncStuff1()
   
   console.log("doSomeAsyncStuff2() called");
-  doSomeAsyncStuff2()
+  await doSomeAsyncStuff2()
   
   console.log('end of main()')
 }
 
-main()
-console.log('The End')
+// main()
+// console.log("The End");
+
+async function runner(){
+  const asdf = await main()
+  console.log('The End')
+  return asdf
+}
+
+runner()
