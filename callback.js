@@ -2,7 +2,7 @@ console.log("Start");
 
 const qwe = ({id: uid, username: uname}) => {
     uid++
-    uname = uname + "qwe"
+    uname = uname + "zxcv"
     console.log(uid, uname);
 }
 
