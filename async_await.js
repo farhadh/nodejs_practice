@@ -4,7 +4,7 @@ function sleep(ms) {
     console.log('sleep function called')
     return new Promise(r => setTimeout(() => {
       console.log(`done waiting for ${ms} ms`)
-      r()
+      r(1)
     }, ms))
 }
 
