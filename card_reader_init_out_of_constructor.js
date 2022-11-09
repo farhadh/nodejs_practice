@@ -30,7 +30,7 @@ class CardReader extends EventEmitter {
                 if ((changes & reader.SCARD_STATE_EMPTY) && (status.state & reader.SCARD_STATE_EMPTY)) {
                     console.log("card removed");/* card removed */
                     this.emit('card_removed')
-                    reader.disconnect(reader.SCARD_LEAVE_CARD, function (err) {
+                    reader.disconnect(reader.SCARD_LEAVE_CARD, (err) => {
                         if (err) {
                             console.log(err);
                         } else {

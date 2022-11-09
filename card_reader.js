@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import pcsclite from 'pcsclite';
-import { EventEmitter } from "events"
+const pcsclite = require('pcsclite');
+const EventEmitter = require('events');
 
 class CardReader extends EventEmitter {
     constructor() {
@@ -22,7 +22,7 @@ class CardReader extends EventEmitter {
                 if (changes) {
                     if ((changes & reader.SCARD_STATE_EMPTY) && (status.state & reader.SCARD_STATE_EMPTY)) {
                         console.log("card removed");/* card removed */
-                        reader.disconnect(reader.SCARD_LEAVE_CARD, function (err) {
+                        reader.disconnect(reader.SCARD_LEAVE_CARD, (err) => {
                             if (err) {
                                 console.log(err);
                             } else {
