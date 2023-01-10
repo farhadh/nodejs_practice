@@ -1,5 +1,5 @@
 const exp = require('express');
-const courses_router = require('courses.js');
+const courses_router = require('./courses.js');
 
 console.log("XXX courses:", courses_router);
 
