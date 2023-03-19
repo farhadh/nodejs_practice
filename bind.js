@@ -31,6 +31,7 @@ In TypeScript, the this: Function type annotation is used to specify the type of
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 (method) Function.bind(this: Function, thisArg: any, ...argArray: any[]): any
+
 When you define a function, the `this` keyword refers to the object that the function is called on.
 However, in JavaScript, the value of this can be changed dynamically depending on how the function is called.
 To enforce stricter rules around the usage of this in functions, TypeScript allows you to specify the type of `this` using the `this: Function` type annotation.
