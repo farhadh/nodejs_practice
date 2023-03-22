@@ -58,6 +58,12 @@ or event listener, and you want to ensure that the this value inside the method 
 
 Callbacks are typically called with a this value of undefined (calling it directly without attaching it to any object)
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+this.someFunction.bind(something) returns a new function, in which the references to `this` will refer to `something`.
+This is a way of saving the current value of `this`, which is in scope during the call to the constructor, so that it can be used later when the function is called.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
 
 
