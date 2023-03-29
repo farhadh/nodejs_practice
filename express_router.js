@@ -1,3 +1,37 @@
+/*
+
+app.use([path,] callback [, callback...])
+Mounts the specified middleware function or functions at the specified path: the middleware function is executed when the base of the requested path matches path.
+
+A route will match any path that follows its path immediately with a “/”. For example: app.use('/apple', ...) will match “/apple”, “/apple/images”, “/apple/images/news”, and so on.
+
+Since path defaults to “/”, middleware mounted without a path will be executed for every request to the app.
+For example, this middleware function will be executed for *every* request to the app:
+
+app.use(function (req, res, next) {
+  console.log('Time: %d', Date.now())
+  next()
+})
+
+
+Middleware functions are executed sequentially, therefore the order of middleware inclusion is important.
+
+// this middleware will not allow the request to go beyond it
+app.use(function (req, res, next) {
+  res.send('Hello World')
+})
+
+// requests will never reach this route
+app.get('/', function (req, res) {
+  res.send('Welcome')
+})
+
+*/
+
+
+
+
+
 const exp = require('express');
 const courses_router = require('./courses.js');
 
