@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
 
 Middleware functions are executed sequentially, therefore the order of middleware inclusion is important.
 
-// this middleware will not allow the request to go beyond it
+// this middleware will not allow the request to go beyond it because `next()` is not called.
 app.use(function (req, res, next) {
   res.send('Hello World')
 })
