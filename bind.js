@@ -241,13 +241,13 @@ const person = {
 };
 
 function greet(greeting) {
-  console.log(this)
+  console.log("this:", this)
   console.log(`${greeting}, ${this.firstName} ${this.lastName}!`);
 }
 
 greet(); // Output: "Hello, John Doe!"
 
-const greetPerson = greet.bind(person, 'hello');
+const greetPerson = greet.bind(person, 'hello'); // now greet will have the same `this` as person object has. We pass person's `this` to greet().
 greetPerson(); // Output: "Hello, John Doe!"
 // greet.bind(person, 'Hello')()
 // ----------------------------------------------------------------
