@@ -36,8 +36,9 @@ promise.then((result) => {
 });
 In this example, a new promise is created that resolves with the string "hello world" after a 1-second delay. The then method is then called on the promise with two callback functions as arguments, one to handle the resolved value and one to handle any errors.
 
-When the promise is resolved with the value "hello world", the then method calls the first callback function, passing the resolved value as its argument. The resolved value can then be consumed and used in the callback function, which in this case logs the string "Resolved value: hello world" to the console.
+When the promise is resolved with the value "hello world", the `then` method calls the first callback function, passing the resolved value as its argument. The resolved value can then be consumed and used in the callback function, which in this case logs the string "Resolved value: hello world" to the console.
 
+while both `return` and `resolve` involve returning values, `return` is a fundamental concept in functions, used to specify what a function produces, while `resolve` is specific to Promises, indicating the successful completion of an asynchronous operation and providing a value for subsequent handling.
 
 Also, while you can handle errors in the `then` method using a second callback function, using `catch` can make your code more readable, modular, and resilient.
 */
